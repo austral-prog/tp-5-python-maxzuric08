@@ -44,5 +44,5 @@ class Book:
         if self.__str__ == other.__str__:
             return True
         else:
-            False
+            return False
         
