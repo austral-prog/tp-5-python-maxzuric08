@@ -23,12 +23,13 @@ class Library:
         return self.__checked_in_books
 
     # 1.1 Add Book:
-    def add_book(self, isbn : str, title : str, author : str) -> None:
-        self.__books.append([isbn, title, author, True, 0])
+    def add_book(self, isbn : str, title : str, author : str) -> list:
+        self.__books.append(Book(isbn, title, author, True, 0))
+        return self.__books
 
     # 1.2 List All Books
-    def list_all_books(self) -> None :
-        pass
+    def list_all_books(self) -> list :
+        return self.__books
 
     # 2.1 Check out book
     def check_out_book(self, isbn : str , dni : int , due_date : str) -> str :
