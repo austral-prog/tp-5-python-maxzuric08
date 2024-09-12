@@ -39,5 +39,5 @@ class Library:
         pass
 
     # Utils
-    def add_user(self, dni, name) -> None :
+    def add_user(self, dni : int , name : str) -> None :
         pass
