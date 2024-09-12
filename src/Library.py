@@ -3,11 +3,11 @@ from src.User import User
 
 
 class Library:
-    def __init__(self):
-        self.__books : list = []
-        self.__users : list = []
-        self.__checked_out_books : list = []
-        self.__checked_in_books : list = []
+    def __init__(self) -> None:
+        self.__books  = []
+        self.__users  = []
+        self.__checked_out_books  = []
+        self.__checked_in_books  = []
 
     # Getters
     def get_books(self) -> list:
