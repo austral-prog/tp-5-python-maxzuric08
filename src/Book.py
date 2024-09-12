@@ -40,6 +40,6 @@ class Book:
     def __str__(self) -> str:
         return f"ISBN: {self.__isbn}, Title: {self.__author}, Author: {self.__author}"
 
-    def __eq__(self, other) -> None:
+    def __eq__(self, other : str) -> None:
         pass
         
