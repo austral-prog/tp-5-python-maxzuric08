@@ -23,7 +23,7 @@ class Library:
         return self.__checked_in_books
 
     # 1.1 Add Book:
-    def add_book(self, isbn : str, title : str, author : str) -> list:
+    def add_book(self, isbn : str, title : str, author : str) -> list[object]:
         self.__books.append(Book(isbn, title, author, True, 0))
         return self.__books
 
@@ -33,12 +33,17 @@ class Library:
 
     # 2.1 Check out book
     def check_out_book(self, isbn : str , dni : int , due_date : str) -> str :
-        pass
+        for i in self.__books:
+            if i.__isbn == isbn :
+                i.set_available(False)
+                self.__checked_out_books.append(i)
+        return f"User {dni} checked out book {isbn}"
+        
 
     # 2.2 Check in book
     def check_in_book(self, isbn : str, dni : int , returned_date : str) -> str :
-        pass
+        return f"Book {isbn} checked in by user {dni}"
 
     # Utils
-    def add_user(self, dni : int , name : str) -> None :
-        pass
+    def add_user(self, dni : int , name : str) -> list :
+        self.__users.append(User(dni, name))
