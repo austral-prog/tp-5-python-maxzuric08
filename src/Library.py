@@ -31,11 +31,11 @@ class Library:
         pass
 
     # 2.1 Check out book
-    def check_out_book(self, isbn, dni, due_date) -> str :
+    def check_out_book(self, isbn : str , dni : int , due_date : str) -> str :
         pass
 
     # 2.2 Check in book
-    def check_in_book(self, isbn, dni, returned_date) -> str :
+    def check_in_book(self, isbn : str, dni : int , returned_date : str) -> str :
         pass
 
     # Utils
