@@ -1,7 +1,7 @@
 class User:
     def __init__(self, dni : int, name : str, number_of_checkouts : int =0, number_of_checkins : int =0):
         self.__dni : int = dni
-        self.__name : int  = name
+        self.__name : str  = name
         self.__number_of_checkouts : int = number_of_checkouts
         self.__number_of_checkins : int = number_of_checkins
 
