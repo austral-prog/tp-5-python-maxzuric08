@@ -41,5 +41,5 @@ class Library:
         return f"Book {isbn} checked in by user {dni}"
 
     # Utils
-    def add_user(self, dni : int , name : str) -> list :
-        return self.__users.append(User(dni, name))
+    def add_user(self, dni : int , name : str) -> None :
+        self.__users.append(User(dni, name))
