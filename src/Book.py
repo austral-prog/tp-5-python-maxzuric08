@@ -40,8 +40,6 @@ class Book:
     def __str__(self) -> str:
         return f"ISBN: {self.__isbn}, Title: {self.__author}, Author: {self.__author}"
 
-    def __eq__(self, other) -> bool:
-        if other.__isbn == self.__isbn:
-            return True
-        else:
-            False
+    def __eq__(self, other) -> None:
+        pass
+        
