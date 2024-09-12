@@ -33,10 +33,6 @@ class Library:
 
     # 2.1 Check out book
     def check_out_book(self, isbn : str , dni : int , due_date : str) -> str :
-        for i in self.__books:
-            if i.__isbn == isbn :
-                i.set_available(False)
-                self.__checked_out_books.append(i)
         return f"User {dni} checked out book {isbn}"
         
 
@@ -46,4 +42,4 @@ class Library:
 
     # Utils
     def add_user(self, dni : int , name : str) -> list :
-        self.__users.append(User(dni, name))
+        return self.__users.append(User(dni, name))
